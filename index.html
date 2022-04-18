@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   
+   <title>Lecture 7 lab: web form</title>
+   <link href="styles.css" rel="stylesheet" />
+   <script src="rb_formsubmit.js"></script>
+</head>
+<body>
+    <header>
+        Lecture 7 Lab: Web Form
+    </header>
+    <section>
+        <form id="webform" action="https://formspree.io/f/mqknlabj" method="POST">
+         <fieldset id="custInfo">
+         <legend>Your Personal Information</legend>
+            <div class="formRow">
+             <label for="name">Full Name*</label>   
+             <input name="custName" id="name" type="text" placeholder="First and last name" required />
+            </div>
+            <div class="formRow">
+                <label for="email">Email Address*</label>   
+                <input name="emailAddy" id="email" type="email" placeholder="email@gmail.com" required />
+               </div>
+               <div class="formRow"> 
+                <label for="study">Current Study</label>
+                <input name="currentStudy" id="study" type="text" value="Douglas College" />
+             </div>   
+             <div class="formRow"> 
+                <label for="age">Age</label>
+                <input name="custAge" id="age" type="text" value="20" />
+             </div> 
+         </fieldset>
+         <fieldset id="Your Quiz">
+            <legend>Your Quiz</legend>
+            <!-- <div class="formRowq1"> -->
+                <p>1. What is the result of the following equation?</p>
+                <label for="2^2x5">2<sup>2</sup>x5=</label>
+                <input name="equation" id="2^2x5" type="text" />
+            <!-- </div> -->
+            <br>
+              <label for="W3C">2. What does the acronym W3C stand for?</label>  
+              <select name="W3Cacronym" id="W3C">
+                  <option value="choice1" selected>3rd World War Coalition</option>
+                  <option value="choice2">World Wide Warcraft</option>
+                  <option value="choice3">World Wide Web Consortium</option>
+                  <option value="choice4">No Idea</option>
+              </select>
+            <div class="formRow">
+                <label for="CSS">3. CSS is an abbreviation of</label>
+                <input name="CSSabbrev" id="CSS" type="text" />
+                <label for="CSS"> stylesheet</label>
+            </div>
+            <div class="formRowq4">
+                <p>4. Select all the (scripting) languages we learn in CSIS 1280?</p>
+                <form>
+                  <input type="checkbox" id="html" name="scripting" value="HTML">
+                  <label for="html">HTML</label>
+                  <input type="checkbox" id="css" name="scripting" value="CSS">
+                  <label for="css">CSS</label>
+                  <input type="checkbox" id="javascript" name="scripting" value="JavaScript">
+                  <label for="javascript">JavaScript</label>
+                  <input type="checkbox" id="php" name="scripting" value="php">
+                  <label for="php">PHP</label>
+                  <input type="checkbox" id="c#" name="scripting" value="c#">
+                  <label for="c#">C#</label>
+                  <input type="checkbox" id="java" name="scripting" value="java">
+                  <label for="java">Java</label>
+                </form>
+            </div>
+            <div class="formQ5">
+                <p>5. Consider the picture of the DOM structure below. Which of the following selector CANNOT be used to select all the <p> elements</p>
+                <input type="radio" id="p" name="structure" value="P">
+                  <label for="p">P</label><br>
+                  <input type="radio" id="h1p" name="structure" value="h1~P">
+                  <label for="h1p">h1~p</label><br>
+                  <input type="radio" id="artp" name="scripting" value="artP">
+                  <label for="javascript">article p</label><br>
+                  <input type="radio" id="articlep" name="scripting" value="articleP">
+                  <label for="articlep">article > p</label><br>
+                  <input type="radio" id="h2p" name="scripting" value="h2P">
+                  <label for="h2p">h1 + p</label><br>
+                  <img src="q5.PNG" alt="q5" id="logoimg" />
+            </div>
+                 <!-- <img src="q5.PNG" alt="q5" id="logoimg" /> -->
+
+            <div class="formQ6">
+                <p>6. Consider the picture of the DOM structure below. Which of the following selector CAN be used to select all the <p> elements</p>
+                <input type="radio" id="li" name="structure" value="Li">
+                  <label for="li">li</label><br>
+                  <input type="radio" id="lin" name="structure" value="Lin">
+                  <label for="lin">li:nth-child(2n+1)</label><br>
+                  <input type="radio" id="ul" name="scripting" value="uL">
+                  <label for="ul">ul > li:(2n+1)</label><br>
+                  <input type="radio" id="ulli" name="scripting" value="ulLi">
+                  <label for="ulli">ul > li</label><br>
+                  <input type="radio" id="ulli2" name="scripting" value="ulLi2">
+                  <label for="ulli2">ul > li(2n+1)</label><br>
+                  <img src="q6.PNG" alt="q6" id="logoimg" />
+            </div> 
+            <!-- <img src="q6.PNG" alt="q6" id="logoimg" /> -->
+
+                <div class="formRow">
+                <label for="q7">7. Douglas College and the Coquitlam campus was named after the former Governor and Liutenant-Governor of British Columbia. What are their names?</label>
+                <textarea name="q7ans" id="q7"></textarea>
+            </div>    
+            </fieldset> 
+         <div id="buttons">
+             <input type="submit" value="Submit My Quiz" />
+             <input type="reset" value="Cancel"/>
+         </div>  
+        </form>
+    </section>
+</body>
